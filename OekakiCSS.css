@@ -1,3 +1,13 @@
+body {
+	margin: 10px auto;
+}
+
 table td{
 	padding: 10px 10px;
+}
+
+.merge {
+	width: 600px;
+	margin-right: auto;
+  margin-left: auto;
 }

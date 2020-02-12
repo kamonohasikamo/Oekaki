@@ -9,17 +9,37 @@
 	</head>
 	<body>
 		<ol>
-			<li>マス数を入力してください</li>
-			行×列<br>
-			<div id="inputData">
-				<form name="inputForm" id="inputFormId">
-					<input type="text" name="lineCount" id="inputLineCountId"> × <input type="text" name="ColumnCount" id="inputColumnCountId">
-					<input type="button" value="送信" onclick="clickButton();" />
+			<div class="merge">
+				<li>マス数を入力してください</li>
+				行×列<br>
+				<div id="inputData">
+					<form name="inputForm" id="inputFormId">
+						<input type="text" name="lineCount" id="inputLineCountId"> × <input type="text" name="ColumnCount" id="inputColumnCountId">
+					</form>
+				</div>
+				<li>行の値の入力</li>
+				各行の値を<b>上から</b>順に，左の数字から右にかけて入力してください．<br>
+				数字と数字の間は<b>「,」区切り</b>で，次の行へは改行で入力してください．<br>
+				<form name="form1">
+					<textarea rows="10" cols="50" id="lineInputDataId" name="lineInputTextArea"></textarea>
+					<input type="button" value="送信" onclick="lineInputButton();" />
+					<input type="button" value="クリア" onclick="lineDeleteButton();" />
 				</form>
-			</div>
-			<li>表の表示</li>
-			<div id="showTable">
 
+				<li>列の値の入力</li>
+				各列の値を<b>左から</b>順に，上の数字から下にかけて入力してください．<br>
+				数字と数字の間は<b>「,」区切り</b>で，次の行へは改行で入力してください．<br>
+				<form name="form2">
+					<textarea rows="10" cols="50" id="columnInputDataId" name="columnInputTextArea"></textarea>
+					<input type="button" value="送信" onclick="columnInputButton();" />
+					<input type="button" value="クリア" onclick="columnDeleteButton();" />
+				</form>
+
+				<li>解答の表示</li>
+				<input type="button" value="解答を表示！" onclick="showAnswerButton();" />
+				<div id="showTable">
+
+				</div>
 			</div>
 		</ol>
 	</body>
