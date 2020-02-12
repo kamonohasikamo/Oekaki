@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>お絵かきロジック自動解答</title>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="OekakiModel.js"></script>
+	</head>
+	<body>
+		<ol>
+			<li>マス数を入力してください</li>
+			行×列<br>
+			<div id="inputData">
+				<form name="inputForm" id="inputFormId">
+					<input type="text" name="lineCount" id="inputLineCountId"> × <input type="text" name="ColumnCount" id="inputColumnCountId">
+					<input type="button" value="送信" onclick="clickButton();" />
+				</form>
+			</div>
+			<li>表の表示</li>
+			<div id="showTable">
+
+			</div>
+		</ol>
+	</body>
+</html>
