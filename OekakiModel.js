@@ -15,13 +15,30 @@ $(function() {
 });
 
 function clickButton() {
-	var lineCountText = document.getElementById("inputLineCountId");
-	var columnCountText = document.getElementById("inputColumnCountId");
+	var lineNum = document.getElementById("inputLineCountId").value;
+	var columnNum = document.getElementById("inputColumnCountId").value;
 
 	// 表を作成
-	var showTableArea = document.getElementById("showTable");
-	if(lineCountText.value != null 
-		&& columnCountText.value != null) {
-		
+	var tableArea = document.getElementById("showTable");
+	var createTable = document.createElement('table');
+	createTable.id = "showTableId";
+	createTable.border = 1;
+
+	var createTableBody = document.createElement('tbody');
+	createTable.appendChild(createTableBody);
+	if(lineNum != null 
+		&& lineNum > 0
+		&& columnNum != null
+		&& columnNum > 0) {
+		for (var i = 0; i < lineNum; i++) {
+			var tr = document.createElement('tr');
+			for (var j = 0; j < columnNum; j++) {
+				var td = document.createElement('td');
+				td.appendChild(document.createTextNode(j));
+				createTableBody.appendChild(td);
+			}
+			createTableBody.appendChild(tr);
+		}
+		tableArea.appendChild(createTable);
 	}
 }
